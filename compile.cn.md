@@ -23,7 +23,13 @@ git clone https://github.com/ireader/3rd.git
 cd src/sdk 
 make clean && make
 cd src/avcodec
+///////////////////////////////////////////////////////
+20230203 编译的时候编译存在错误的， 存在头文件的，
+这个地方编译存在错误的时候，不用关心的，编译rtsp-server-test.cpp
+自己加上头文件就可以的
+//////////////////////////////////////////////////////////////
 make clean && make
+
 ```
 
 2、在media-server目录下执行make
@@ -38,6 +44,12 @@ make clean && make
 ```markdown
 cd src/media-server/test
 make clean && make
+
+20230203 fix the build file start
+我自己在编译的时候不使用这样的方法进行编译，自己写cmakelists.txt 编译
+rtsp-server-test.cpp 就ok的(写的编译文件都在这个博客中)
+https://blog.csdn.net/hfut31415926/article/details/128875772?csdn_share_tail=%7B%22type%22%3A%22blog%22%2C%22rType%22%3A%22article%22%2C%22rId%22%3A%22128875772%22%2C%22source%22%3A%22hfut31415926%22%7D
+20230203 fix the build file end
 
 #func name 为你想要测试的列子，具体的请查看test.cpp支持的测试用例或者直接./debug.linux/test查看输出支持的函数
 ./debug.linux/test -c <func name>
