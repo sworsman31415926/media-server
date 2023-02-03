@@ -79,3 +79,4 @@ eg: ./debug.linux/test -c rtsp_example
 
 # 致谢：
 文档作者：[Dw](https://github.com/Dw9)
+20230203 在自己工作中测试h264 和 h265 都可以播放的
